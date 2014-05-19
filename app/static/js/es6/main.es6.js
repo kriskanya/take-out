@@ -1,4 +1,4 @@
-/* global io */
+/* jshint unused:false */
 
 (function(){
   'use strict';
@@ -8,11 +8,19 @@
   var socket;
 
   function initialize(){
-    initializeSocketIo();
+    $('#login').click(login);
   }
 
-  function initializeSocketIo(){
-    socket = io.connect('/app');
+  function login(){
+    var username = $('#username').val();
+    ajax('/login', 'post', {username:username}, h=>{
+      $('#username').val('');
+      $('#dashboard').empty().append(h);
+    });
   }
+
+function ajax(url, type, data={}, success=r=>console.log(r), dataType='html'){
+  $.ajax({url:url, type:type, dataType:dataType, data:data, success:success});
+}
 
 })();

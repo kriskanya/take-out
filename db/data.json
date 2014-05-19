@@ -1,0 +1,6 @@
+{"type": "breakfast", "food": "eggs", "cost": 2.50, "calories": 125}
+{"type": "breakfast", "food": "bacon", "cost": 3.50, "calories": 200}
+{"type": "lunch", "food": "sandwich", "cost": 5.25, "calories": 400}
+{"type": "lunch", "food": "salad", "cost": 3.75, "calories": 215}
+{"type": "dinner", "food": "steak", "cost": 11.25, "calories": 455}
+{"type": "dinner", "food": "chicken", "cost": 6.50, "calories": 325}

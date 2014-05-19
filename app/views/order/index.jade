@@ -1,0 +1,24 @@
+extends ../shared/template
+
+block content
+  h1 Order Food
+
+  #controls
+    input#username(type='text', name='name', placeholder='Name', autofocus=true)
+    button#login Login
+  #dashboard
+
+  #dropdowns
+    form(method='POST', action='/order')
+      input(type='date', name='date')
+      input(type='text', name='quantity', placeholder='Quantity')
+      select(name='type')
+        option Breakfast
+        option Lunch
+        option Dinner
+      select(name='food')
+        each food in orders
+          option(value=food.food)= food.food
+      button Order Food
+  #orderTotal
+    h3 Order Total:
