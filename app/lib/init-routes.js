@@ -23,7 +23,7 @@ function load(app, fn){
   app.get('/order', dbg, order.index);
 
   app.post('/login', dbg, users.login);
-  app.post('/order', dbg, users.create);
+  app.post('/order', dbg, users.newOrder);
   console.log('Routes Loaded');
   fn();
 }

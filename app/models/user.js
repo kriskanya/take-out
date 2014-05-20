@@ -6,6 +6,11 @@ var _ = require('lodash');
 class User{
   constructor(username){
     this.username = username;
+    this.order = [];
+  }
+
+  orderObjects(ord){
+    this.order.push(ord);
   }
 
   static login(username, fn){
